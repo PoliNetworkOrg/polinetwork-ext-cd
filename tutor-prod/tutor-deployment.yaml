@@ -18,9 +18,9 @@ spec:
         - name: app-dev
           image: zibas/poli-tutor-bot:d3738e614ee1668937dc291d5a0a73488ecac891
           imagePullPolicy: IfNotPresent
-          volumeMounts:
-            - name: config
-              mountPath: /config
+#           volumeMounts:
+#             - name: config
+#               mountPath: /config
           resources:
             requests:
               cpu: "100m"
@@ -30,10 +30,10 @@ spec:
               memory: "1000Mi"
           ports:
             - containerPort: 5000
-      volumes:
-        - name: config
-          secret:
-            secretName: tutor-secrets
+#       volumes:
+#         - name: config
+#           secret:
+#             secretName: tutor-secrets
 ---
 apiVersion: v1
 kind: Service
