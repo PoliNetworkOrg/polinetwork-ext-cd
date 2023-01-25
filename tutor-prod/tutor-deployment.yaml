@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: app-dev
-          image: polinetwork/polifemo_backend_dev:a492411fcaad8c49e986d41eb67e18ed840e0342
+          image: zibas/poli-tutor-bot:d3738e614ee1668937dc291d5a0a73488ecac891
           imagePullPolicy: IfNotPresent
           volumeMounts:
             - name: config
@@ -26,7 +26,7 @@ spec:
               cpu: "100m"
               memory: "300Mi"
             limits:
-              cpu: "300m"
+              cpu: "400m"
               memory: "1000Mi"
           ports:
             - containerPort: 5000
