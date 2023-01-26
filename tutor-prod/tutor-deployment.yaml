@@ -50,7 +50,7 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: app-dev-ingress
+  name: tutorapp-ingress
   annotations:
     kubernetes.io/ingress.class: "nginx"
     cert-manager.io/cluster-issuer: "letsencrypt-prod-issuer"
@@ -60,7 +60,7 @@ spec:
   tls:
     - hosts:
         - api.polinetwork.org
-      secretName: app-dev-tls
+      secretName: tutor-prod-tls
   rules:
     - host: api.polinetwork.org
       http:
@@ -69,6 +69,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: app-dev-service
+                name: tutor-prod-service
                 port:
                   number: 8000
