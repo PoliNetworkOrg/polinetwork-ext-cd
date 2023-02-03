@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: app-dev
-          image: zibas/poli-tutor-bot:6a21164a01dd409c1b101191199364f4526ffca5
+          image: zibas/poli-tutor-bot:2ca5996f41425fc4a16675e1acaad6604c4a632a
           imagePullPolicy: IfNotPresent
           volumeMounts:
             - name: config
