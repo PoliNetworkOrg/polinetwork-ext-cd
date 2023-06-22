@@ -23,11 +23,11 @@ spec:
               mountPath: /config
           resources:
             requests:
-              cpu: "100m"
-              memory: "300Mi"
+              cpu: "10m"
+              memory: "100Mi"
             limits:
-              cpu: "400m"
-              memory: "1000Mi"
+              cpu: "50m"
+              memory: "150Mi"
           ports:
             - containerPort: 5000
       volumes:
